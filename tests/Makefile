@@ -5,7 +5,7 @@ LDFLAGS= -static
 
 include libgloss.mk
 
-PROGRAMS = pwm blkdev accum charcount nic-loopback big-blkdev pingd \
+PROGRAMS = pwm gcd adder blkdev accum charcount nic-loopback big-blkdev pingd \
            streaming-passthrough streaming-fir nvdla spiflashread spiflashwrite
 
 spiflash.img: spiflash.py

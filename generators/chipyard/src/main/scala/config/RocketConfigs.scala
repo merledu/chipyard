@@ -124,7 +124,7 @@ class dmiRocketConfig extends Config(
 // DOC include end: DmiRocket
 
 // DOC include start: GCDTLRocketConfig
-class GCDTLRocketConfig extends Config(
+class GCDAdderTLRocketConfig extends Config(
   new chipyard.iobinders.WithUARTAdapter ++
   new chipyard.iobinders.WithTieOffInterrupts ++
   new chipyard.iobinders.WithBlackBoxSimMem ++
@@ -134,7 +134,8 @@ class GCDTLRocketConfig extends Config(
   new chipyard.config.WithUART ++
   new chipyard.config.WithBootROM ++
   new chipyard.config.WithL2TLBs(1024) ++
-  new chipyard.example.WithGCD(useAXI4=false, useBlackBox=false) ++          // Use GCD Chisel, connect Tilelink
+  new chipyard.example.WithAdder(useAXI4=false, useBlackBox=false) ++
+  //new chipyard.example.WithGCD(useAXI4=false, useBlackBox=false) ++          // Use GCD Chisel, connect Tilelink
   new freechips.rocketchip.subsystem.WithNoMMIOPort ++
   new freechips.rocketchip.subsystem.WithNoSlavePort ++
   new freechips.rocketchip.subsystem.WithInclusiveCache ++

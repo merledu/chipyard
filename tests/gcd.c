@@ -1,5 +1,5 @@
 #include "mmio.h"
-
+#include <stdio.h>
 #define GCD_STATUS 0x2000
 #define GCD_X 0x2004
 #define GCD_Y 0x2008

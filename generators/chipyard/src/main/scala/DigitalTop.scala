@@ -22,7 +22,8 @@ class DigitalTop(implicit p: Parameters) extends System
   with sifive.blocks.devices.spi.HasPeripherySPIFlash // Enables optionally adding the sifive SPI flash controller
   with icenet.CanHavePeripheryIceNIC // Enables optionally adding the IceNIC for FireSim
   with chipyard.example.CanHavePeripheryInitZero // Enables optionally adding the initzero example widget
-  with chipyard.example.CanHavePeripheryGCD // Enables optionally adding the GCD example widget
+  //with chipyard.example.CanHavePeripheryGCD // Enables optionally adding the GCD example widget
+  with chipyard.example.CanHavePeripheryAdder
   with chipyard.example.CanHavePeripheryStreamingFIR // Enables optionally adding the DSPTools FIR example widget
   with chipyard.example.CanHavePeripheryStreamingPassthrough // Enables optionally adding the DSPTools streaming-passthrough example widget
   with nvidia.blocks.dla.CanHavePeripheryNVDLA // Enables optionally having an NVDLA
@@ -38,6 +39,6 @@ class DigitalTopModule[+L <: DigitalTop](l: L) extends SystemModule(l)
   with sifive.blocks.devices.gpio.HasPeripheryGPIOModuleImp
   with sifive.blocks.devices.spi.HasPeripherySPIFlashModuleImp
   with icenet.CanHavePeripheryIceNICModuleImp
-  with chipyard.example.CanHavePeripheryGCDModuleImp
+  //with chipyard.example.CanHavePeripheryGCDModuleImp
   with freechips.rocketchip.util.DontTouch
 // DOC include end: DigitalTop
